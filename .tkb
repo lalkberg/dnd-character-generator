@@ -1,0 +1,130 @@
+{
+  "scope": "Workspace",
+  "tasks": {
+    "cCkhRJtN-lMGMxdeW09Rm": {
+      "id": "cCkhRJtN-lMGMxdeW09Rm",
+      "description": "## 1.1 Install a JDK\n\n- Install a current LTS JDK suitable for the project.\n- Prefer Java 25 LTS for this project unless you have a specific reason to target another version.\n- Verify that the Java compiler and runtime are available from your terminal.\n- Learn the difference between the JDK, the JVM, and the Java runtime.\n- Make sure your IDE is configured to use the same JDK.",
+      "columnId": "column-done",
+      "color": "#00000000"
+    },
+    "V9zeel2caTGfOkzcQ-ECf": {
+      "id": "V9zeel2caTGfOkzcQ-ECf",
+      "description": "## 1.2 Install Maven\n\n- Install Apache Maven.\n- Verify that Maven is available from the terminal.\n- Learn what Maven does and why a Java project benefits from a standard build tool.\n- Read the Maven Getting Started Guide before creating the project.",
+      "columnId": "column-done",
+      "color": "#80808000"
+    },
+    "PfFnJuz5wYAv1qBcOy8UX": {
+      "id": "PfFnJuz5wYAv1qBcOy8UX",
+      "description": "## 1.3 Create the Maven project\n\n- Create a new directory for the project.\n- Initialize a Git repository.\n- Create a Maven Java project.\n- Choose a sensible group/package name that you expect to keep for the lifetime of the project.\n- Choose the application artifact name.\n- Inspect the generated project instead of immediately replacing it with your own structure.\n- Identify the purpose of the source, test, and resource directories.\n- Understand what the `pom.xml` file represents.\n- Build the empty project from the terminal.",
+      "columnId": "column-doing",
+      "color": "#80808000"
+    },
+    "eaA0BFu4oS_H0dkMxH3Bi": {
+      "id": "eaA0BFu4oS_H0dkMxH3Bi",
+      "description": "## 1.4 Create the first application\n\n- Add the application's entry point.\n- Make the application start successfully.\n- Make it print a simple message.\n- Run it from your IDE.\n- Run it through Maven.\n- Confirm that both approaches use the same project configuration.",
+      "columnId": "column-todo"
+    },
+    "g2e-dja8aiL08kPWFnxoW": {
+      "id": "g2e-dja8aiL08kPWFnxoW",
+      "description": "## 1.5 Add JUnit\n\n- Add JUnit 5 as a test dependency.\n- Create one deliberately simple test.\n- Run the test from the IDE.\n- Run the same test suite through Maven.\n- Learn what a unit test is and what the Arrange/Act/Assert pattern means.",
+      "columnId": "column-todo"
+    },
+    "arZy1zful2n3VsKCPGIYO": {
+      "id": "arZy1zful2n3VsKCPGIYO",
+      "description": "## 1.6 Establish the repository basics\n\n- Add a `.gitignore` appropriate for Java and your IDE.\n- Create a README.\n- Document the Java and Maven versions you are targeting.\n- Make the first Git commit.\n- Verify that the repository can be cloned and built from scratch.",
+      "columnId": "column-todo"
+    },
+    "JxSI437Yk_2AtF0vLQyJg": {
+      "id": "JxSI437Yk_2AtF0vLQyJg",
+      "description": "## 2.1 Define the initial domain vocabulary\n\nWrite down the nouns your application needs before creating classes.\n\nAt minimum consider:\n\n- Character\n- Ability\n- Ability score\n- Species\n- Class\n- Background\n- Level\n- Feature\n- Proficiency\n- Spell\n- Equipment\n\nFor each concept, decide whether it represents:\n\n- an individual character value\n- a reusable game definition\n- an external data record\n- a calculated value\n- a user choice",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    },
+    "P4Jlrihfo4uCCEvbG-B4k": {
+      "id": "P4Jlrihfo4uCCEvbG-B4k",
+      "description": "## 2.2 Decide what should be an enum\n\nIdentify concepts that are genuinely closed and stable.\n\nGood candidates may include the six abilities and some internal categories.\n\nDo not automatically make every D&D entity an enum. Anything expected to come from external data should generally remain data-driven.",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    },
+    "ghfEvFzyiGb5GEVd-fCWt": {
+      "id": "ghfEvFzyiGb5GEVd-fCWt",
+      "description": "## 2.3 Decide what should be a record or class\n\nResearch Java records before deciding how to model small immutable values.\n\nConsider records for simple values where identity and behavior are minimal.\n\nConsider normal classes where the object has meaningful behavior, invariants, lifecycle, or internal state.\n\nDo not worry about getting this perfect. The purpose is to make an initial decision you can revise.",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    },
+    "5h28ThYUPSYka0AIdtvev": {
+      "id": "5h28ThYUPSYka0AIdtvev",
+      "description": "## 2.4 Establish package boundaries\n\nCreate a package structure that separates:\n\n- domain concepts\n- application/use-case logic\n- CLI concerns\n- data/infrastructure concerns\n\nKeep the initial number of packages small.\n\nDo not create dozens of empty packages merely because a future architecture diagram contains them.",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    },
+    "H3cJ9ze1TYfxc_9RDaoZk": {
+      "id": "H3cJ9ze1TYfxc_9RDaoZk",
+      "description": "## 2.5 Model Character\n\nDefine what information a Character must contain.\n\nDecide:\n\n- which fields are mandatory\n- which can be absent\n- which values are derived\n- which values belong to other objects\n- whether a Character should be mutable\n\nWrite down these decisions in a short design note if useful.",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    },
+    "XU3RSlYs2eNrG_sacCB9w": {
+      "id": "XU3RSlYs2eNrG_sacCB9w",
+      "description": "## 2.6 Model ability scores\n\nDefine a representation for the six abilities.\n\nDecide how the application will:\n\n- store scores\n- retrieve a score for a specific ability\n- calculate an ability modifier\n- represent an invalid score\n\nWrite tests for the modifier rules as soon as the behavior exists.",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    },
+    "C7VZRol6qoI2rOTNQLu-J": {
+      "id": "C7VZRol6qoI2rOTNQLu-J",
+      "description": "## 2.7 Review the model\n\nBefore moving on, inspect the domain model for:\n\n- duplicated concepts\n- classes that know too much\n- dependencies on CLI code\n- dependencies on JSON\n- premature abstractions\n- hardcoded D&D data\n\nCommit the milestone once you are satisfied with the basic boundaries.",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    },
+    "paggt1_4OUJCwP4CNMrj8": {
+      "id": "paggt1_4OUJCwP4CNMrj8",
+      "description": "",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    },
+    "eyC5CdMo9z3BL1yQiQLAc": {
+      "id": "eyC5CdMo9z3BL1yQiQLAc",
+      "description": "",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    },
+    "bMmGTFcTZRtZMlRCEb0nP": {
+      "id": "bMmGTFcTZRtZMlRCEb0nP",
+      "description": "",
+      "columnId": "column-IE5zKAOCvXDFQivz3UefE"
+    }
+  },
+  "columns": [
+    {
+      "id": "column-IE5zKAOCvXDFQivz3UefE",
+      "title": "Backlog",
+      "tasksIds": [
+        "JxSI437Yk_2AtF0vLQyJg",
+        "P4Jlrihfo4uCCEvbG-B4k",
+        "ghfEvFzyiGb5GEVd-fCWt",
+        "5h28ThYUPSYka0AIdtvev",
+        "H3cJ9ze1TYfxc_9RDaoZk",
+        "XU3RSlYs2eNrG_sacCB9w",
+        "C7VZRol6qoI2rOTNQLu-J",
+        "paggt1_4OUJCwP4CNMrj8",
+        "eyC5CdMo9z3BL1yQiQLAc",
+        "bMmGTFcTZRtZMlRCEb0nP"
+      ]
+    },
+    {
+      "id": "column-todo",
+      "title": "To do",
+      "tasksIds": [
+        "eaA0BFu4oS_H0dkMxH3Bi",
+        "g2e-dja8aiL08kPWFnxoW",
+        "arZy1zful2n3VsKCPGIYO"
+      ]
+    },
+    {
+      "id": "column-doing",
+      "title": "Doing",
+      "tasksIds": [
+        "PfFnJuz5wYAv1qBcOy8UX"
+      ]
+    },
+    {
+      "id": "column-done",
+      "title": "Done",
+      "tasksIds": [
+        "V9zeel2caTGfOkzcQ-ECf",
+        "cCkhRJtN-lMGMxdeW09Rm"
+      ]
+    }
+  ]
+}
