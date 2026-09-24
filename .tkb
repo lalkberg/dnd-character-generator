@@ -16,13 +16,13 @@
     "PfFnJuz5wYAv1qBcOy8UX": {
       "id": "PfFnJuz5wYAv1qBcOy8UX",
       "description": "## 1.3 Create the Maven project\n\n- Create a new directory for the project.\n- Initialize a Git repository.\n- Create a Maven Java project.\n- Choose a sensible group/package name that you expect to keep for the lifetime of the project.\n- Choose the application artifact name.\n- Inspect the generated project instead of immediately replacing it with your own structure.\n- Identify the purpose of the source, test, and resource directories.\n- Understand what the `pom.xml` file represents.\n- Build the empty project from the terminal.",
-      "columnId": "column-doing",
+      "columnId": "column-done",
       "color": "#80808000"
     },
     "eaA0BFu4oS_H0dkMxH3Bi": {
       "id": "eaA0BFu4oS_H0dkMxH3Bi",
       "description": "## 1.4 Create the first application\n\n- Add the application's entry point.\n- Make the application start successfully.\n- Make it print a simple message.\n- Run it from your IDE.\n- Run it through Maven.\n- Confirm that both approaches use the same project configuration.",
-      "columnId": "column-todo"
+      "columnId": "column-doing"
     },
     "g2e-dja8aiL08kPWFnxoW": {
       "id": "g2e-dja8aiL08kPWFnxoW",
@@ -106,7 +106,6 @@
       "id": "column-todo",
       "title": "To do",
       "tasksIds": [
-        "eaA0BFu4oS_H0dkMxH3Bi",
         "g2e-dja8aiL08kPWFnxoW",
         "arZy1zful2n3VsKCPGIYO"
       ]
@@ -115,13 +114,14 @@
       "id": "column-doing",
       "title": "Doing",
       "tasksIds": [
-        "PfFnJuz5wYAv1qBcOy8UX"
+        "eaA0BFu4oS_H0dkMxH3Bi"
       ]
     },
     {
       "id": "column-done",
       "title": "Done",
       "tasksIds": [
+        "PfFnJuz5wYAv1qBcOy8UX",
         "V9zeel2caTGfOkzcQ-ECf",
         "cCkhRJtN-lMGMxdeW09Rm"
       ]
